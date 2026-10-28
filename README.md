@@ -17,13 +17,13 @@
 
 <br><br>
 
-<sub>Itajubá, MG · Engenharia de Computação na UNIFEI · Asimov Jr.</sub>
+<sub>Itajubá, MG · Engenharia de Computação - UNIFEI · Asimov Jr.</sub>
 
 </div>
 
 <br>
 
-### Oi, eu sou a Isadora ♡
+### Oi, eu sou a Isadora!
 
 Sou **desenvolvedora fullstack** e estudante de **Engenharia de Computação na UNIFEI**. Minha atuação passa por diferentes etapas de um projeto, da construção da interface à lógica que faz tudo funcionar.
 
