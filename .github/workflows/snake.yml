@@ -1,0 +1,35 @@
+
+name: Snake contributions
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '15 7 * * *'
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Generate animated SVGs
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: isadora-franco
+          outputs: |
+            dist/github-snake-dark.svg?color_snake=#F6BED1&color_dots=#110E14,#32202E,#73445E,#B97795,#F0A9C1
+            dist/github-snake-light.svg?color_snake=#C85C88&color_dots=#FFF7FA,#F9DBE6,#F3BBD0,#E28BAC,#C85C88
+
+      - name: Publish to output branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
